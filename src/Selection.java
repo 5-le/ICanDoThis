@@ -36,6 +36,8 @@ public class Selection {
 		tax = tax15 + tax205+tax26+tax29+tax33;
 		System.out.println(tax);
 		
+		in.close();
+		
 	}
 
 }
