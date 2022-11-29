@@ -21,11 +21,12 @@ public class Selection {
 			remainder = number-tax15;
 			
 			if (remainder >49020 && remainder <=98040) {
-				
+				tax205 = remainder * 0.205;
 			
 			}
 			
-			else {
+			else if (remainder >49020 && remainder >98940) {
+				
 				
 			}
 			
