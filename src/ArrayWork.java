@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 public class ArrayWork {
 
@@ -21,42 +22,53 @@ public class ArrayWork {
 				b++;	
 		}
 		
-		double max = 0;
+		double max = temp[0];
 		
-		for (int i=0;i<n-1;i++) {
+		for (int i=0;i<n;i++) {
 			
-			if (temp[i]>=temp[i+1]) {
+			if (temp[i]>max) {
 				max = temp[i];
 			}
-			else {
-				max = temp[i+1];
-			}
+		
 		}
 		
-		double min = 0;
+		double min = temp[0];
 		
-		for (int i=0;i<n-1;i++) {
-			
-			if (temp[i]<=temp[i+1]) {
+		for (int i=0;i<n;i++) {
+			if (temp[i] < min) {
 				min = temp[i];
+				
 			}
-			else {
-				min = temp[i+1];
-			}
+		
 		}
 		
 		double average = 0;
+		double sum = 0;
 		
-		for (int i=0;i<n-1;i++) {
-			average = temp[i]+temp[i+1];
-			
+		for (int i=0;i<n;i++) {
+			sum+=temp[i];
 		}
 		
+		average = sum/n;
+		
+		double a = 0;
+		
+		for(int i=0; i <n; i++) {
+			for (int j=0; j<n-1; j++) {
+				if (temp[j] > temp[j+1]) {
+					a = temp[j];
+					temp[j]=temp[j+1];
+					temp[j+1]=a;
+				}
+			}
+		}
 		
 		
 		System.out.println("The maximum is: "+max);
 		System.out.println("The minimum is: "+min);
 		System.out.println("The average is: "+average);
+		
+		System.out.println("Your sorted array is: "+Arrays.toString(temp));
 
 		
 		in.close();

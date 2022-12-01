@@ -9,10 +9,20 @@ public class Nested {
 		System.out.println("Enter a second number");
 		int second = in.nextInt();
 		
-		for (int i=0;i>=first;i++) {
+		String output = "";
+		
+		int number = 0;
+		
+		for (int i=0;i<=first;i++) {
+			
+			
+			System.out.println(number +"\n");
+			number++;
+			
 			
 		}
 		
+				
 		in.close();
 	}
 
