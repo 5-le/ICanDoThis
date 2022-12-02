@@ -12,12 +12,10 @@ public class Operators {
 
 		int number = first;
 		
-		number = number -1;
-		System.out.println(first+" "+"-"+" "+1+" "+"="+" "+number);
-		
-		number = number *3;
 		System.out.println();
 		
+		number = number -1;
+		number = number *3;
 		number = number + 12;
 		number = number/3;
 		number = number +5;
