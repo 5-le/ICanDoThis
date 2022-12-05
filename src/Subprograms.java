@@ -11,6 +11,9 @@ public class Subprograms {
 		System.out.println("Enter another line");
 		String two = in.nextLine();
 		
+		
+		
+		
 		int n = one.length();
 		int o = two.length();
 		
